@@ -88,12 +88,41 @@ x2 y2 k2
 ---
 
 ## Usage
-1. Compile and run using Node.js:
-   ```bash
-   node maximize_goodness.js < input.txt > output.txt
-   ```
-2. Replace `input.txt` with your test input file.
-3. Output will be written to `output.txt`.
+1. **Prerequisites**:
+   - Install [Node.js](https://nodejs.org/) if not already installed.
+   - Install Visual Studio Code if not already installed.
+
+2. **Setup the Project**:
+   - Save the solver code as `goodness_puzzle_solver.js` in your project folder.
+   - Open the folder in Visual Studio Code.
+
+3. **Run the Program**:
+   - Open a terminal in Visual Studio Code (Terminal > New Terminal).
+   - Run the following command:
+     ```bash
+     node goodness_puzzle_solver.js < input.txt > output.txt
+     ```
+   - Replace `input.txt` with your test input file.
+   - Output will be written to `output.txt`.
+
+4. **Debugging in VSCode**:
+   - Create a `launch.json` file under `.vscode/` folder.
+   - Add the following configuration:
+     ```json
+     {
+         "version": "0.2.0",
+         "configurations": [
+             {
+                 "type": "node",
+                 "request": "launch",
+                 "name": "Run Goodness Puzzle Solver",
+                 "program": "${workspaceFolder}/goodness_puzzle_solver.js",
+                 "args": ["<", "input.txt", ">", "output.txt"]
+             }
+         ]
+     }
+     ```
+   - Press `F5` to start debugging.
 
 ---
 
