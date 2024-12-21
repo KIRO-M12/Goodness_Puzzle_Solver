@@ -88,41 +88,45 @@ x2 y2 k2
 ---
 
 ## Usage
-1. **Prerequisites**:
-   - Install [Node.js](https://nodejs.org/) if not already installed.
-   - Install Visual Studio Code if not already installed.
 
-2. **Setup the Project**:
-   - Save the solver code as `goodness_puzzle_solver.js` in your project folder.
-   - Open the folder in Visual Studio Code.
+### Prerequisites:
+- Install [Node.js](https://nodejs.org/) if not already installed.
+- Install Visual Studio Code if not already installed.
 
-3. **Run the Program**:
-   - Open a terminal in Visual Studio Code (Terminal > New Terminal).
-   - Run the following command:
-     ```bash
-     node goodness_puzzle_solver.js < input.txt > output.txt
-     ```
-   - Replace `input.txt` with your test input file.
-   - Output will be written to `output.txt`.
+### Setup the Project:
+- Save the solver code as `goodness_puzzle_solver.js` in your project folder.
+- Create an input file named `input.txt` with test data.
 
-4. **Debugging in VSCode**:
-   - Create a `launch.json` file under `.vscode/` folder.
-   - Add the following configuration:
-     ```json
-     {
-         "version": "0.2.0",
-         "configurations": [
-             {
-                 "type": "node",
-                 "request": "launch",
-                 "name": "Run Goodness Puzzle Solver",
-                 "program": "${workspaceFolder}/goodness_puzzle_solver.js",
-                 "args": ["<", "input.txt", ">", "output.txt"]
-             }
-         ]
-     }
-     ```
-   - Press `F5` to start debugging.
+### Run the Program:
+**For PowerShell (Windows):**
+```powershell
+Get-Content input.txt | node goodness_puzzle_solver.js | Out-File output.txt
+```
+- Replace `input.txt` with your test input file.
+- Output will be written to `output.txt`.
+
+**To View Output:**
+```powershell
+Get-Content output.txt
+```
+
+### Debugging in VSCode:
+- Create a `launch.json` file under `.vscode/` folder.
+- Add the following configuration:
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Goodness Puzzle Solver",
+            "program": "${workspaceFolder}/goodness_puzzle_solver.js"
+        }
+    ]
+}
+```
+- Press `F5` to start debugging.
 
 ---
 
